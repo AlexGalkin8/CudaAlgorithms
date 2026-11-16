@@ -68,6 +68,19 @@ namespace
             return false;
         }
 
+        // Consume the final benchmark outputs so optimized builds cannot discard the CPU work.
+        constexpr float tolerance = 1e-5f;
+        for (int i = 0; i < vectorLength; ++i)
+        {
+            const float expected = A[i] + B[i];
+            if (std::fabs(cpuResult[i] - expected) > tolerance ||
+                std::fabs(gpuResult[i] - expected) > tolerance)
+            {
+                std::cerr << "Post-benchmark validation failed at index " << i << '\n';
+                return false;
+            }
+        }
+
         benchmark::printComparison("Vector addition", vectorLength, cpu, gpu);
         return true;
     }
@@ -95,3 +108,4 @@ int main()
 
     return runVectorAddBenchmarks();
 }
+

@@ -16,6 +16,8 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Tests.h" />
+    <ClInclude Include="src\Tests.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
