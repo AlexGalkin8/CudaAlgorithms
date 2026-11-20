@@ -18,7 +18,7 @@ The projects use Visual Studio `.vcxproj` files and do not require CMake.
 
 | Project | Description | Status |
 |---|---|---|
-| `VectorAdd` | Element-wise vector addition on the CPU and GPU | Complete |
+| [VectorAdd](VectorAdd/README.md) | Element-wise vector addition on the CPU and GPU | Complete |
 | [PrefixSum](PrefixSum/README.md) | Hierarchical exclusive prefix sum | Complete |
 | `MemoryPatterns` | GPU memory access and shared memory | Planned |
 | `StreamCompaction` | Filter elements into a compact array using scan | Next |
@@ -26,4 +26,3 @@ The projects use Visual Studio `.vcxproj` files and do not require CMake.
 Each project has its own folder and Visual Studio project file. Shared code is kept in `Common/`.
 
 See [VectorAdd/README.md](VectorAdd/README.md) for details about the first project.
-
