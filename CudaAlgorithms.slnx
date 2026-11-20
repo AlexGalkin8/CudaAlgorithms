@@ -2,5 +2,6 @@
   <Configurations>
     <Platform Name="x64" />
   </Configurations>
+  <Project Path="PrefixSum/PrefixSum.vcxproj" Id="d963da69-eab6-4f81-86bf-31fbdeb86230" />
   <Project Path="VectorAdd/VectorAdd.vcxproj" Id="9e42f335-d5f5-4eb2-ad2a-b67c276c597d" />
 </Solution>
